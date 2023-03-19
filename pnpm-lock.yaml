@@ -5,10 +5,10 @@ importers:
   .:
     specifiers:
       '@types/node': ^18.15.3
-      typescript: ^5.0.2
+      typescript: ^4.9.5
     devDependencies:
       '@types/node': 18.15.3
-      typescript: 5.0.2
+      typescript: 4.9.5
 
   apps/client:
     specifiers:
@@ -3275,9 +3275,9 @@ packages:
       mime-types: 2.1.35
     dev: false
 
-  /typescript/5.0.2:
-    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
-    engines: {node: '>=12.20'}
+  /typescript/4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
 
