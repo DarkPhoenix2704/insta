@@ -30,7 +30,7 @@ const app: Express = express();
 // Express middlewares
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: process.env.CLIENT_URL as string,
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
