@@ -29,7 +29,7 @@ export const SideNav = () => {
         rowGap="20px"
       >
         <Heading fontFamily="Roboto" fontWeight="bold" fontSize="48px">
-          Instant!!
+          Instant
         </Heading>
         <VStack rowGap="8px">
           <Image
