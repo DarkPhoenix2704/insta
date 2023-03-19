@@ -1,4 +1,5 @@
 import { Login } from "@app/view/Auth";
+import { Signup } from "@app/view/Auth/Signup";
 import { VStack, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -11,7 +12,7 @@ const Auth = () => {
       alignItems="center"
       justifyContent="center"
     >
-      {view === "login" ? <Login /> : null}
+      {view === "login" ? <Login /> : <Signup />}
       <Text
         fontWeight="medium"
         fontFamily="Roboto"

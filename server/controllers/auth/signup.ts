@@ -5,7 +5,12 @@ import UserModel from "../../model/Users";
 const signup = async (req: Request, res: Response) => {
   const { email, password, slug, name } = req.body;
   const hashPassword = await hash(password, 10);
-  const user = new UserModel({ email, password: hashPassword, slug, name });
+  const user = await new UserModel({
+    email,
+    password: hashPassword,
+    slug,
+    name,
+  });
   await user.save();
   return res.json({ message: "User created", success: true, user });
 };

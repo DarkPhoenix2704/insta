@@ -29,6 +29,7 @@ export const AuthProvider = ({ children }: AuthContextProps) => {
   }) => {
     try {
       const { data } = await api.post("/auth/signup", profileDto);
+      console.log(data);
       if (!data.success) {
         throw new Error();
       }
@@ -37,7 +38,7 @@ export const AuthProvider = ({ children }: AuthContextProps) => {
       }
       if (data.success && data.data) {
         setUser(data.data);
-        router.push("/");
+        router.push("/auth");
       }
     } catch {
       router.push("/error");

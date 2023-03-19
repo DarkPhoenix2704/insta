@@ -13,6 +13,4 @@ export const RegisterValidator = Yup.object({
     .oneOf([Yup.ref("password"), null], "Passwords must match")
     .required("Required"),
   slug: Yup.string().required("Required"),
-  bio: Yup.string().required("Required"),
-  gender: Yup.string().required("Required"),
 });
