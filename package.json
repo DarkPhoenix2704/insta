@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build:api": "cd apps/server && pnpm build",
-    "build:web": "cd apps/client && pnpm build"
+    "build:web": "cd apps/client && pnpm build",
+    "start:api": "cd apps/server && pnpm start",
+    "start:web": "cd apps/client && pnpm start"
   },
   "keywords": [],
   "author": "",
