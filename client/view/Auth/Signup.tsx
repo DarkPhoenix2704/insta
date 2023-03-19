@@ -12,14 +12,13 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useRouter } from "next/router";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { InferType } from "yup";
 
 type FormType = InferType<typeof RegisterValidator>;
 
-export const Signup = () => {
+export const Signup = ({ setView }: SignUpProps) => {
   const methods = useForm<FormType>({
     resolver: yupResolver(RegisterValidator),
   });
@@ -31,7 +30,6 @@ export const Signup = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const { signUp } = useAuth();
-  const router = useRouter();
 
   return (
     <VStack
@@ -55,7 +53,7 @@ export const Signup = () => {
                 name: profileDto.name,
                 slug: profileDto.slug,
               });
-              router.push("/auth");
+              setView("login");
             } catch (error) {
               console.log(error);
             } finally {
@@ -178,3 +176,7 @@ export const Signup = () => {
     </VStack>
   );
 };
+
+interface SignUpProps {
+  setView: Dispatch<SetStateAction<"login" | "signup">>;
+}

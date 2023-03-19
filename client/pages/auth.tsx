@@ -12,7 +12,7 @@ const Auth = () => {
       alignItems="center"
       justifyContent="center"
     >
-      {view === "login" ? <Login /> : <Signup />}
+      {view === "login" ? <Login /> : <Signup setView={setView} />}
       <Text
         fontWeight="medium"
         fontFamily="Roboto"
