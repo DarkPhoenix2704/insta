@@ -1,0 +1,42 @@
+{
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/index.js",
+    "jest.setup.ts",
+    "jest.config.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "baseUrl": ".",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "incremental": true,
+    "jsx": "preserve",
+    "paths": {
+      "@app/*": [
+        "./*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "typeRoots": [
+    "./node_modules/@types/",
+    "./types.d.ts"
+  ]
+}
